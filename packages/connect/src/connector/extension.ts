@@ -252,7 +252,7 @@ export const createScClient = (): ScClient => {
   }
 
   return {
-    addChain: (chainSpec: string, jsonRpcCallback?: JsonRpcCallback) =>
+    addChain: (chainSpec: string, jsonRpcCallback?: JsonRpcCallback, state?: string) =>
       internalAddChain(false, chainSpec, jsonRpcCallback, [...chains.values()]),
     addWellKnownChain: (
       name: WellKnownChain,
